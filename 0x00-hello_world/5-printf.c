@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - printing the string with printful function
+ * Return: program return 0 (Success)
  */
 int main(void)
 {
