@@ -1,3 +1,7 @@
+#include "main.h"
+#include "stdio.h"
+#include "unistd.h"
+
 /**
  * _strcat - Concatenates two strings.
  *
