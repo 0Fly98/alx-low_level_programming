@@ -1,36 +1,31 @@
 #include "main.h"
-#include <unistd.h>
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * _strcat - Concatenates two strings.
- *
- * @dest: A pointer to the destination string.
- * @src: A pointer to the source string.
+ * @dest: The destination string.
+ * @src: The source string.
  *
  * Return: A pointer to the resulting string dest.
  */
 char *_strcat(char *dest, char *src)
 {
-    char *dest_end = dest;
+    int dest_len = 0;
+    int i;
 
-    /* Find the end of the dest string */
-    while (*dest_end)
-    {
-        dest_end++;
-    }
+    /* Find the length of the destination string */
+    while (dest[dest_len] != '\0')
+        dest_len++;
 
-    /* Copy the src string to the end of the dest string */
-    while (*src)
-    {
-        *dest_end = *src;
-        dest_end++;
-        src++;
-    }
+    /* Concatenate the source string to the destination string */
+    for (i = 0; src[i] != '\0'; i++)
+        dest[dest_len + i] = src[i];
 
-    /* Add a terminating null byte */
-    *dest_end = '\0';
+    /* Add the terminating null byte */
+    dest[dest_len + i] = '\0';
 
-    return (dest);
+    /* Return the resulting string */
+    return dest;
 }
 
