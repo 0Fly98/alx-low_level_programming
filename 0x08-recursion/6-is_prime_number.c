@@ -38,4 +38,3 @@ int prime_check(int n, int k)
 		return (prime_check(n, k + 1));
 	}
 }
-
