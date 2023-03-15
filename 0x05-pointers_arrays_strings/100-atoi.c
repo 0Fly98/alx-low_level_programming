@@ -1,37 +1,35 @@
-#include <unistd.h>
-#include <stdio.h>
 #include "main.h"
-
 /**
- * atoi - converts a string to an integer
- * @s: the string to convert
- *
- * Return: the converted integer value
+ * _atoi - function that converts string to an integer
+ * @s: pointer
+ * Return: integer
  */
-int atoi(char *s)
+
+int _atoi(char *s)
 {
-    int sign = 1;
-    int result = 0;
-    int i = 0;
+	int p = 0;
+	unsigned int k = 0;
+	int m = 1;
+	int q = 0;
 
-    while (s[i])
-    {
-        if (s[i] == '-')
-        {
-            sign *= -1;
-        }
-        else if (s[i] >= '0' && s[i] <= '9')
-        {
-            result = (result * 10) + (s[i] - '0');
-        }
-        else if (result > 0)
-        {
-            /* We've reached the end of the number */
-            break;
-        }
-        i++;
-    }
-
-    return result * sign;
+	while  (s[p])
+	{
+		if (s[p] == 45)
+		{
+			m *= -1;
+		}
+		while (s[p] >= 48 && s[p] <= 57)
+		{
+			q = 1;
+			k = (k * 10) + (s[p] - '0');
+			p++;
+		}
+		if (q == 1)
+		{
+			break;
+		}
+		p++;
+	}
+	k *= m;
+	return (k);
 }
-
