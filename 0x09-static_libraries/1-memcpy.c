@@ -1,5 +1,4 @@
 #include "main.h"
-#include <Stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
