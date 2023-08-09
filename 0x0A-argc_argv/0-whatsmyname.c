@@ -14,5 +14,5 @@ int main(int argc __attribute__((unused)), char *argv[])
 {
 	printf("Program Name: %s\n", *argv);
 
-	return 0;
+	return (0);
 }
