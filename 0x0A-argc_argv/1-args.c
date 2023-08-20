@@ -2,18 +2,16 @@
 #include "main.h"
 
 /**
- * main - Entry point of the program
- * @ac: The count of arguments
- * @av: Array of argument strings
+ * main - print the number of arguments passed to the program
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Description: Prints the number of arguments passed
- *
- * Return: Always return 0 (Success)
+ * Return: Always 0 (Sucess)
  */
-int main(int ac, char *av[])
+int main(int argc, char *argv[])
 {
-	(void)av;
-	printf("Arguments Count: %d\n", ac - 1);
+	(void) argv;
+	printf("%d\n", argc - 1);
 
 	return (0);
 }
