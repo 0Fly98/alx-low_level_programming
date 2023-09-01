@@ -1,1 +1,1 @@
-Learning static libraries for firt time.
+0x09. C - Static libraries: Project.
