@@ -1,23 +1,19 @@
 #include "main.h"
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
- * _strpbrk - Entry point
- * @a: input
- * @accept: input
- * Return: Always 0
+ * _strpbrk - locates the first occurrence in the string s of any of
+ * the bytes in the string accept
+ * @s: string to search
+ * @accept: string containing the characters to match
+ *
+ * Return: pointer to the byte in s that matches one of the bytes in accept,
+ * or NULL if no such byte is found
  */
-char *_strpbrk(char *a, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	int p;
-
-	while (*a)
-	{
-		for (p = 0; accept[p]; p++)
-		{
-		if (*a == accept[p])
-		return (a);
-		}
-	a++;
-	}
-
-return ('\0');
+	return (strpbrk(s, accept));
 }
