@@ -9,12 +9,13 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *ptr = malloc(b);
+	void *ptr;
 
-	if (!ptr)
+	ptr = malloc(b);
+	if (ptr == NULL)
 	{
-		fprintf(stderr, "Fatal: failed to allocate %u bytes.\n", b);
-		abort();
+		fprintf(stderr, "Error: Failed to allocate memory\n");
+		exit(98);
 	}
 
 	return (ptr);
