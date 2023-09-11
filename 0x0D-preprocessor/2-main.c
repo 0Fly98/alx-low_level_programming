@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <sdtio.h>
 
 /**
  * main - prints the name of the file
@@ -7,6 +7,8 @@
  */
 int main(void)
 {
-	printf("%s\n", __FILE__);
+	char *file_name = _FILE_;
+
+	puts(file_name);
 	return (0);
 }
